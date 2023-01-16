@@ -1,0 +1,62 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@next/next/recommended",
+    "standard",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "ignorePatterns": [
+    "node_modules/*",
+    "config-overrides.js",
+    "next.config.js"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "import"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
